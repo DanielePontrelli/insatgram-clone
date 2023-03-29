@@ -1,0 +1,14 @@
+.formContainer {
+    background: #A6A6A6;
+    height: 71vh;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: black;
+    padding: 70px;
+}
