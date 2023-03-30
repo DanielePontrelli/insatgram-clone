@@ -7,6 +7,7 @@ import Logout from './pages/Logout';
 import { authCheck } from './store/actions/handleAuth';
 import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
+import styles from './style/App.module.css';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
   },[])
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Header isAuthenticated={token} />
       <Routes>
         <Route exact path="/" element={<Home />} />

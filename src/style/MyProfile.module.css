@@ -5,4 +5,33 @@
     margin: 20px 5px;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 10px #888888e9;
+}
+
+.topBar {
+    display: flex;
+    padding: 5px;
+    height: 80px;    
+}
+
+.profilePicture {
+    margin-right: 10px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loggati {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: red;
+    background-color: white;
+    font-size: 30px;
 }

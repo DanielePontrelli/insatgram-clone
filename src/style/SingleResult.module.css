@@ -5,4 +5,25 @@
     margin: 20px 5px;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 10px #8b8b8be6;
+}
+
+.topBar {
+    display: flex;
+    padding: 5px;
+    height: 80px;    
+}
+
+.profilePicture {
+    margin-right: 10px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.bottomBar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
 }

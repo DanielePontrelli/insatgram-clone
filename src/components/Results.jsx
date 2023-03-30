@@ -1,19 +1,11 @@
 import styles from '../style/Results.module.css';
 import SingleResult from './SingleResult';
-import { useState } from 'react';
 
 
 const Results = ({data, savedIDs, addPost}) => { 
 
-    // const [randomNumber,  setRandomNumber] = useState(Math.round(Math.random()*60))
-
-    // function generateRandomNumber() {
-    //     setRandomNumber(Math.round(Math.random() * 60));
-    //   }
-
     const renderData = () => {   
-        const myData = data.results;
-        
+        const myData = data.results;     
         return myData?.map((post) => {
             const doesExist = savedIDs.includes(post.user.md5);
                 return (

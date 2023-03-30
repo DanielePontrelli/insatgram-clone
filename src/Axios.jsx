@@ -5,15 +5,10 @@ const firebase = axios.create({
 })
 
 const instaPost = axios.create({
-    baseURL: "https://randomuser.me/api/0.8/?results=50"
-})
-
-const instaPhoto = axios.create({
-    baseURL: "https://picsum.photos/200"
+    baseURL: "https://randomuser.me/api/0.8/?results=51"
 })
 
 export {
     firebase,
     instaPost,
-    instaPhoto
 }

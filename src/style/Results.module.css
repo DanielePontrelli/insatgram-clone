@@ -1,16 +1,13 @@
 .container {
-    /* background: rgb(186, 186, 186); */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding:0 30px;
 }
 
 .resultsContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;

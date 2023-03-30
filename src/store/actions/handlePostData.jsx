@@ -141,10 +141,8 @@ export const addNewPost = (id, user, token,randomNumber, picture) => {
         } catch (error) {
             console.log(error);
         } 
-    }
-    
+    }   
 }
-
 
 
 export {

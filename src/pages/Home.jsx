@@ -43,7 +43,7 @@ const addPost = async (doesExist, id, user, randomNumber, picture) => {
   }
 
   return (
-    <div style={{background:'#A6A6A6'}}>
+    <div>
       {showResults()}
     </div>
   );

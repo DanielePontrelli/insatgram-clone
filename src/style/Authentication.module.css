@@ -1,14 +1,40 @@
 .formContainer {
-    background: #A6A6A6;
-    height: 71vh;
+    height: 76vh;
     padding: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url(../../public/SfondoPolaroid.jpg) no-repeat center;
+    background-size: cover;
 }
 
 form {
     background: black;
-    padding: 70px;
+    padding: 65px;
+}
+
+.logo {
+    font-size: 50px;
+    color: black;    
+    padding: 0 10px;
+    font-family: cursive;
+}
+
+.polaroid {
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    box-shadow: 10px 20px #8b8b8be6;
+}
+
+input {
+    height: 20px;
+    border-radius: 10px;
+}
+
+.myButton {
+    margin-top: 15px;
+    width: 100%;
+    cursor: pointer;
 }
