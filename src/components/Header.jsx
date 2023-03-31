@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
+
+
 const Header = ({isAuthenticated}) => {
     return (
         <div className={styles.container}>
@@ -11,7 +13,7 @@ const Header = ({isAuthenticated}) => {
                     <FontAwesomeIcon size='2x' color='#e7b928' icon={faCameraRetro} />
                     <p style={{fontFamily:'cursive', paddingLeft:'5px'}}> | <span style={{color: '#e7b928'}}>𝓟</span>𝓸𝓵𝓪𝓻𝓸𝓲𝓭</p>
                 </Link>
-            </div>        
+            </div>   
             <div className={styles.personalData}>
                 {isAuthenticated ? 
                 <Link to="/logout" style={{textDecoration: 'none'}}>

@@ -1,5 +1,5 @@
 import Results from "../components/Results";
-import {fetchPostData, addNewPost} from '../store/actions/handlePostData';
+import {fetchPostData, saveNewPost} from '../store/actions/handlePostData';
 import Message from "../components/Message";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -26,12 +26,12 @@ function App() {
  
 
 // aggiungere post
-const addPost = async (doesExist, id, user, randomNumber, picture) => {
+const savePost = async (doesExist, id, user, randomNumber, picture, myPost) => {
   if (doesExist) {
       alert('Post salvato in precedenza')
       return
   }
-  dispatch(addNewPost(id, user, userToken, randomNumber, picture));
+  dispatch(saveNewPost(id, user, userToken, randomNumber, picture, myPost));
 };
 
   const showResults = () => {
@@ -39,7 +39,7 @@ const addPost = async (doesExist, id, user, randomNumber, picture) => {
       <Message message='ERRORE DI NETWORK' error />
       ) : loading ? (
       <Message text='Sta caricando...' />
-      ) : (<Results loading={loading} error={error} addPost={addPost} savedIDs={savedIDs} data={data}  />) 
+      ) : (<Results loading={loading} error={error} savePost={savePost} savedIDs={savedIDs} data={data}  />) 
   }
 
   return (

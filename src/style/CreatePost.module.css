@@ -1,0 +1,47 @@
+.back {
+    background: #0000003e; 
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 240vh;
+    height: 100vh;
+}
+
+.container {
+    max-width: 350px;
+    transform: translate(100vh , 20vh);
+    background: #fff;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 30px;
+    background: black;
+    color: #e7b928;
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.button {
+    padding: 10px;
+    border-radius: 30px;
+    background: #e7b928;
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer
+}

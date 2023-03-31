@@ -19,6 +19,7 @@ export const fetchPostData =  () => {
         try {
             await dispatch(getSavedPostIDs());
             const myData = await instaPost.get();
+            // console.log(myData)
             dispatch(fetchPostDataSuccess(myData.data));
         // la richiesta e' stata fatta
         } catch (error) {
@@ -87,13 +88,14 @@ export const fetchSavedPost =  () => {
             const response = await firebase.get();
             const PostList = [];
             for (let key in response.data) {
-              console.log(response)  
+            //   console.log(response.data)  
               PostList.push({ 
                 key: key, 
                 user: response.data[key].PostUser,
                 id: response.data[key].PostId,
                 randomNumber: response.data[key].PostRandom,
-                picture: response.data[key].PostPicture
+                picture: response.data[key].PostPicture,
+                myPost: response.data[key].MyPost
               })
             }
             dispatch(fetchSavedPostSuccess(PostList))
@@ -126,23 +128,29 @@ export const fetchSavedPostFail = (error) => {
 }
 
 
-// // ADD NEW Post
-export const addNewPost = (id, user, token,randomNumber, picture) => {
+// // Save NEW Post
+export const saveNewPost = (id, user, token,randomNumber, picture, myPost) => {
     return async (dispatch) => {  
         try {
             const data = await firebase.post(`?auth=${token}`, {
             PostId: id,
             PostUser: user,
             PostRandom: randomNumber,
-            PostPicture: picture
+            PostPicture: picture,
+            MyPost: myPost
         });
         await dispatch(getSavedPostIDs());
-        console.log('addnewpost', data);
+        console.log('saveNewPost', data);
         } catch (error) {
             console.log(error);
         } 
     }   
 }
+
+
+// CREATE post
+
+
 
 
 export {
