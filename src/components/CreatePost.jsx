@@ -11,7 +11,6 @@ export const CreatePost = () => {
     const [url, setUrl] = useState(null);
 
     const inputRef = useRef(null);
-    console.log(inputRef.current)
 
     const upload = async () => {
         if (image == null) return;
